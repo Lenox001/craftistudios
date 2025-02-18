@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>CraftiStudios</title>
+  <meta name="title" content="CraftiStudios">
+  <meta name="description" content="CraftiStudios">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rosario:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="javascript:void(0)" class="logo" onclick="navigateTo('home')">CraftiStudios</a>
+
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+       <ul class="navbar-list">
+  <li>
+    <a href="javascript:void(0)" class="navbar-link" onclick="navigateTo('home')">Home</a>
+  </li>
+
+  <li>
+    <a href="javascript:void(0)" class="navbar-link" onclick="navigateTo('gallery')">Gallery</a>
+  </li>
+  <li>
+    <a href="javascript:void(0)" class="navbar-link" onclick="navigateTo('about')"><Obj>About Us</Obj></a>
+  </li>
+
+  <li>
+    <a href="javascript:void(0)" class="navbar-link" onclick="navigateTo('blog')">Blog</a>
+  </li>
+
+  <li>
+    <a href="javascript:void(0)" class="navbar-link" onclick="navigateTo('contact')">Contact Us</a>
+  </li>
+</ul>
+
+<script>
+  function navigateTo(sectionId) {
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      window.history.replaceState(null, null, window.location.pathname);
+      window.scrollTo({ top: targetElement.offsetTop, behavior: "smooth" });
+    }
+  }
+</script>
+
+
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+     <section class="section hero" aria-label="home" id="home">
+  <div class="container">
+
+    <div class="hero-content">
+
+      <h1 class="h1 hero-title">
+        Designing Spaces,  
+        <span class="span">Building Futures</span>
+      </h1>
+
+      <p class="section-text">
+        We specialize in architecture, landscape design, and construction, creating functional and aesthetic spaces that inspire and endure.
+      </p>
+
+     <a href="javascript:void(0)" class="btn" onclick="navigateTo('gallery')">
+  <span class="span">Explore Our Work</span>
+  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+</a>
+
+    </div>
+
+    <div class="wrapper">
+      <div class="hero-banner-1 img-holder" style="--width: 400; --height: 550;">
+        <img src="./assets/images/hero-banner-1.jpg" width="400" height="550"
+          alt="Modern architectural structure with landscape elements" class="img-cover">
+      </div>
+
+      <div class="hero-banner-2 img-holder" style="--width: 500; --height: 850;">
+        <img src="./assets/images/hero-banner-2.jpg" width="500" height="850" 
+          alt="Sustainable urban landscape with green spaces" class="img-cover">
+      </div>
+
+      <img src="./assets/images/hero-shape.png" width="570" height="676" alt="abstract architectural shape" class="shape">
+    </div>
+
+  </div>
+</section>
+<style>
+  .hero {
+  background-image: url('./assets/images/bg-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+
+</style>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+     <section class="section about" aria-label="about" id="about">
+  <div class="container">
+
+    <div class="wrapper">
+      <figure class="about-banner about-banner-1 img-holder" style="--width: 600; --height: 480;">
+        <img src="./assets/images/about-1.jpg" width="600" height="480" loading="lazy" 
+          alt="Architect reviewing blueprints in a design studio" class="img-cover">
+      </figure>
+
+      <h2 class="h2 section-title">Crafting Exceptional Spaces</h2>
+    </div>
+
+    <figure class="about-banner about-banner-2 img-holder" style="--width: 500; --height: 700;">
+      <img src="./assets/images/about-2.jpg" width="500" height="700" loading="lazy"
+        alt="Modern architectural model in a design workspace" class="img-cover">
+    </figure>
+
+    <div class="about-content">
+
+      <h3 class="h2 section-title">Innovative Architecture & Sustainable Design</h3>
+
+      <p class="section-text">
+        We blend creativity with functionality to craft timeless architectural and landscape solutions.  
+        Our expertise spans residential, commercial, and urban development projects, ensuring sustainable and  
+        aesthetically refined environments.
+      </p>
+
+      <a href="javascript:void(0)" class="btn" onclick="navigateTo('gallery')">
+        <span class="span">Discover More</span>
+        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+      </a>
+
+      <figure class="about-banner about-banner-3 img-holder" style="--width: 850; --height: 420;">
+        <img src="./assets/images/about-3.jpg" width="850" height="420" loading="lazy"
+          alt="Team of architects collaborating on a landscape masterplan" class="img-cover">
+      </figure>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+      <!-- 
+        - #COLLECTION
+      -->
+
+     <section class="section collection text-center" aria-labelledby="collection-label">
+  <div class="container">
+
+    <h2 class="h2 section-title" id="collection-label">
+      Our Architectural & Landscape Design Portfolio
+    </h2>
+
+    <p class="section-text">
+      Explore our innovative designs, sustainable landscapes, and expertly crafted structures that redefine spaces.
+    </p>
+
+    <ul class="grid-list">
+
+      <li>
+        <div class="collection-card">
+
+          <figure class="card-banner img-holder" style="--width: 500; --height: 550;">
+            <img src="./assets/images/collection-1.jpg" width="500" height="550" loading="lazy"
+              alt="Modern Architectural Design" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+
+            <h3 class="h3 card-title">Architectural Design</h3>
+
+            <p class="card-text">
+              Contemporary and functional structures tailored to enhance urban and residential spaces.
+            </p>
+
+            <a href="javascript:void(0)" class="btn" onclick="navigateTo('gallery')">
+              <span class="span">View Projects</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="collection-card">
+
+          <figure class="card-banner img-holder" style="--width: 500; --height: 550;">
+            <img src="./assets/images/collection-2.jpg" width="500" height="550" loading="lazy"
+              alt="Landscape Design" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+
+            <h3 class="h3 card-title">Landscape Architecture</h3>
+
+            <p class="card-text">
+              Thoughtfully designed outdoor spaces that blend aesthetics with sustainability.
+            </p>
+
+            <a href="javascript:void(0)" class="btn" onclick="navigateTo('gallery')">
+              <span class="span">View Projects</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="collection-card">
+
+          <figure class="card-banner img-holder" style="--width: 500; --height: 550;">
+            <img src="./assets/images/collection-3.jpg" width="500" height="550" loading="lazy"
+              alt="Construction & Engineering" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+
+            <h3 class="h3 card-title">Construction & Engineering</h3>
+
+            <p class="card-text">
+              High-quality craftsmanship and engineering solutions for long-lasting, durable structures.
+            </p>
+
+            <a href="javascript:void(0)" class="btn" onclick="navigateTo('gallery')">
+              <span class="span">View Projects</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+    <section class="feature" aria-label="features">
+
+  <div class="feature-banner has-bg-image has-after"
+    style="background-image: url('./assets/images/feature-banner.jpg')">
+    <button class="play-btn" aria-label="play video: innovative design process">
+      <img src="./assets/images/play.svg" width="60" height="60" loading="lazy" alt="play icon">
+    </button>
+  </div>
+
+  <div class="section feature-content">
+    <div class="container">
+
+      <h2 class="h2 section-title">
+        Crafting Inspired Spaces with Innovation & Precision
+      </h2>
+
+      <p class="section-text">
+        Transforming ideas into breathtaking landscapes and architectural marvels, blending artistry with functionality.
+      </p>
+
+      <ul class="feature-list">
+
+        <li>
+          <div class="feature-list-card">
+
+            <div class="card-icon">
+              <img src="./assets/images/feature-icon-1.svg" width="45" height="45" loading="lazy"
+                alt="quality assurance icon">
+            </div>
+
+            <div>
+              <h3 class="h4 card-title">Uncompromised Quality</h3>
+
+              <p class="card-text">
+                Every project is built to perfection, ensuring durability, aesthetics, and sustainability.
+              </p>
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="feature-list-card">
+
+            <div class="card-icon">
+              <img src="./assets/images/feature-icon-2.svg" width="45" height="45" loading="lazy"
+                alt="expert team icon">
+            </div>
+
+            <div>
+              <h3 class="h4 card-title">Expert Craftsmanship</h3>
+
+              <p class="card-text">
+                Our team of architects, designers, and engineers bring expertise and creativity to every detail.
+              </p>
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="feature-list-card">
+
+            <div class="card-icon">
+              <img src="./assets/images/feature-icon-3.svg" width="45" height="45" loading="lazy"
+                alt="cost-efficient icon">
+            </div>
+
+            <div>
+              <h3 class="h4 card-title">Cost-Effective Solutions</h3>
+
+              <p class="card-text">
+                Delivering premium designs without exceeding budgets—beauty and function at the right price.
+              </p>
+            </div>
+
+          </div>
+        </li>
+
+      </ul>
+
+      <p>
+        From concept to completion, we ensure every space we create is timeless, functional, and truly inspiring.
+      </p>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+      <!-- 
+        - #TESTIMONIALS
+      -->
+
+   <section class="section testi" aria-label="client testimonials">
+  <div class="container">
+
+    <div class="testi-card">
+
+      <p class="card-text">
+        "The architectural design exceeded my expectations! The precision, creativity, and functionality in every detail truly brought my vision to life. Highly recommended!"
+      </p>
+
+      <p class="client-name">Edward</p>
+
+      <p class="client-title">Architectural Project Client</p>
+
+      <img src="./assets/images/quote.svg" width="50" height="50" loading="lazy" class="icon" alt="quote">
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+      <!-- 
+        - #GALLERY
+      -->
+
+      <section class="gallery" id="gallery">
+
+  <ul class="gallery-list">
+
+    <li>
+      <div class="gallery-card has-bg-image has-after"
+        style="background-image: url('./assets/images/gallery-1.jpg')">
+        <div class="card-content">
+
+          <h3 class="h3 card-title">Modern Facades & Exteriors</h3>
+
+          <a href="#" class="btn-link">
+            <span class="span">Explore Projects</span>
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="gallery-card has-bg-image has-after"
+        style="background-image: url('./assets/images/gallery-2.jpg')">
+        <div class="card-content">
+
+          <h3 class="h3 card-title">Innovative Structural Designs</h3>
+
+          <a href="#" class="btn-link">
+            <span class="span">Explore Projects</span>
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="gallery-card has-bg-image has-after"
+        style="background-image: url('./assets/images/gallery-3.jpg')">
+        <div class="card-content">
+
+          <h3 class="h3 card-title">Urban Landscapes & Green Spaces</h3>
+
+          <a href="#" class="btn-link">
+            <span class="span">Explore Projects</span>
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="gallery-card has-bg-image has-after"
+        style="background-image: url('./assets/images/gallery-4.jpg')">
+        <div class="card-content">
+
+          <h3 class="h3 card-title">Interior Aesthetics & Spatial Design</h3>
+
+          <a href="#" class="btn-link">
+            <span class="span">Explore Projects</span>
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+</section>
+
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+     <section class="section blog" aria-labelledby="blog-label" id="blog">
+  <div class="container">
+
+    <h2 class="h2 section-title text-center" id="blog-label">Architecture Insights & Trends</h2>
+
+    <p class="section-text text-center">
+      Explore the latest in architectural design, innovative building techniques, and industry trends shaping the future of construction.
+    </p>
+
+    <ul class="grid-list">
+
+      <li>
+        <div class="blog-card">
+
+          <figure class="card-banner img-holder" style="--width: 1024; --height: 683;">
+            <img src="./assets/images/blog-1.jpg" width="1024" height="683" loading="lazy"
+              alt="The Art of Designing Modern Sustainable Buildings" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+
+            <h3 class="h4">
+              <a href="#" class="card-title">
+                The Art of Designing Modern Sustainable Buildings
+              </a>
+            </h3>
+
+            <div class="card-meta">
+
+              <a href="#" class="card-meta-wrapper">
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">admin</span>
+              </a>
+
+              <time class="card-meta-wrapper" datetime="2022-10-12">
+                <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">October 12, 2022</span>
+              </time>
+
+              <a href="#" class="card-meta-wrapper">
+                <ion-icon name="folder-open-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Architecture & Design</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="blog-card">
+
+          <figure class="card-banner img-holder" style="--width: 1024; --height: 683;">
+            <img src="./assets/images/blog-2.jpg" width="1024" height="683" loading="lazy"
+              alt="Mastering Architectural Visualization and 3D Rendering" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+
+            <h3 class="h4">
+              <a href="#" class="card-title">
+                Mastering Architectural Visualization and 3D Rendering
+              </a>
+            </h3>
+
+            <div class="card-meta">
+
+              <a href="#" class="card-meta-wrapper">
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">admin</span>
+              </a>
+
+              <time class="card-meta-wrapper" datetime="2022-10-12">
+                <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">October 12, 2022</span>
+              </time>
+
+              <a href="#" class="card-meta-wrapper">
+                <ion-icon name="folder-open-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Architectural Tools</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="blog-card">
+
+          <figure class="card-banner img-holder" style="--width: 1024; --height: 683;">
+            <img src="./assets/images/blog-3.jpg" width="1024" height="683" loading="lazy"
+              alt="5 Revolutionary Trends in Modern Architecture" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+
+            <h3 class="h4">
+              <a href="#" class="card-title">
+                5 Revolutionary Trends in Modern Architecture
+              </a>
+            </h3>
+
+            <div class="card-meta">
+
+              <a href="#" class="card-meta-wrapper">
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">admin</span>
+              </a>
+
+              <time class="card-meta-wrapper" datetime="2022-10-12">
+                <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">October 12, 2022</span>
+              </time>
+
+              <a href="#" class="card-meta-wrapper">
+                <ion-icon name="folder-open-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Industry Trends</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="blog-card">
+
+          <figure class="card-banner img-holder" style="--width: 1024; --height: 683;">
+            <img src="./assets/images/blog-4.jpg" width="1024" height="683" loading="lazy"
+              alt="The Future of Urban Planning and Smart Cities" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+
+            <h3 class="h4">
+              <a href="#" class="card-title">
+                The Future of Urban Planning and Smart Cities
+              </a>
+            </h3>
+
+            <div class="card-meta">
+
+              <a href="#" class="card-meta-wrapper">
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">admin</span>
+              </a>
+
+              <time class="card-meta-wrapper" datetime="2022-10-12">
+                <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">October 12, 2022</span>
+              </time>
+
+              <a href="#" class="card-meta-wrapper">
+                <ion-icon name="folder-open-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Urban Development</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+
+    <a href="#" class="btn">
+      <span class="span">Read More</span>
+
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </a>
+
+  </div>
+</section>
+
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+  <div class="container">
+
+    <div class="section footer-top">
+
+      <div class="footer-brand">
+
+       <a href="javascript:void(0)" class="logo" onclick="navigateTo('home')">CraftiStudios</a>
+       
+
+
+        <p class="footer-text">
+          A design studio focused on architectural solutions, blending creativity with functionality. Let’s shape the spaces of tomorrow.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-list" id="contact">
+
+  <p class="footer-list-title">Get in Touch</p>
+
+  <p class="footer-text">
+    We value innovative ideas. Reach out to discuss your next architectural project with us.
+  </p>
+
+  <a href="javascript:void(0)" class="btn" onclick="navigateTo('contact')">
+    <span class="span">Contact Us</span>
+
+    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+  </a>
+
+</div>
+
+<script>
+  function navigateTo(sectionId) {
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      window.history.replaceState(null, null, window.location.pathname);
+      window.scrollTo({ top: targetElement.offsetTop, behavior: "smooth" });
+    }
+  }
+</script>
+
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p class="copyright">
+        Copyright &copy; <span id="year"></span> CraftiStudios. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Set the current year in the copyright
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

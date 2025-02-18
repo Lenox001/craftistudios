@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Effect</title>
+    <style>
+        body {
+            background-color: #222; /* Dark background for contrast */
+            overflow: hidden; /* Prevents scrollbars from appearing */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: orange;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 1;
+            animation: fadeOut 0.8s linear forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Move your mouse to see the effect!</h1>
+
+    <script>
+        document.addEventListener("mousemove", (event) => {
+            const particle = document.createElement("div");
+            particle.classList.add("particle");
+
+            // Position particle at mouse location
+            particle.style.left = `${event.clientX}px`;
+            particle.style.top = `${event.clientY}px`;
+
+            document.body.appendChild(particle);
+
+            // Remove particle after animation
+            setTimeout(() => {
+                particle.remove();
+            }, 800);
+        });
+    </script>
+</body>
+</html>
